@@ -7,7 +7,7 @@ Route::get('/', function () {
 });
 
 //route resource for products
-Route::resource('/products', \App\Http\Controllers\ProductController::class);
+// Route::resource('/products', \App\Http\Controllers\ProductController::class);
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
@@ -26,7 +26,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-    
+
     // Your product routes here
-    Route::resource('products', ProductController::class);
+    Route::resource('/products', \App\Http\Controllers\ProductController::class);
 });
