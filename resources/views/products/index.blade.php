@@ -109,9 +109,9 @@
                                     @forelse ($products as $product)
                                         <tr>
                                             <td>
-                                                <img src="{{ Storage::disk('s3')->url('public/products/'.$product->image) }}" 
-                                                     class="product-img" 
-                                                     alt="{{ $product->title }}">
+                                                    <img src="{{ Storage::disk('public')->url('storage/products/'.$product->image) }}" 
+                                                        class="product-img" 
+                                                        alt="{{ $product->title }}">
                                             </td>
                                             <td class="align-middle">{{ $product->title }}</td>
                                             <td class="align-middle">{{ "Rp " . number_format($product->price,2,',','.') }}</td>

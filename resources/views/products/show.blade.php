@@ -16,7 +16,7 @@
             <div class="col-md-4">
                 <div class="card border-0 shadow-sm rounded">
                     <div class="card-body">
-                        <img src="{{ Storage::disk('s3')->url('public/products/' . $product->image) }}" class="rounded"
+                        <img src="{{ Storage::disk('public')->url('/storage/products/' . $product->image) }}" class="rounded"
                             style="width: 100%">
                     </div>
                 </div>
